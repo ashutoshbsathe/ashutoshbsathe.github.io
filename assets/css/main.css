@@ -510,7 +510,7 @@ figcaption { font-size: 0.875rem; }
 a { color: #666; text-decoration: none; }
 a:hover { color: #00c454; text-decoration: none; }
 
-article a, .news a { color: #00c454; font-weight: 100; }
+article a, .news a { color: #00c454; font-weight: normal; }
 article a:hover, .news a:hover { text-decoration: underline; }
 
 .social a { color: #666; }
