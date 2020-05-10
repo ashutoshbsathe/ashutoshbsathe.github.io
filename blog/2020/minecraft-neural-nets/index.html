@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Ashutosh Sathe | Building Neural Nets in Minecraft</title>
+  <meta name="description" content="Webpage of Ashutosh Sathe
+">
+
+  
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/blog/2020/minecraft-neural-nets/">
+  
+  
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-163324683-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    
+    <span class="site-title">
+        
+        <strong>Ashutosh</strong> Sathe
+    </span>
+    
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+      <div class="trigger">
+        <!-- About -->
+        <a class="page-link" href="/">about</a>
+
+        <!-- Pages -->
+        
+          
+        
+          
+        
+          
+        
+          
+            <a class="page-link" href="/projects/">projects</a>
+          
+        
+          
+        
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- CV link -->
+        <!-- <a class="page-link" href="/assets/pdf/CV.pdf">vitae</a> -->
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Building Neural Nets in Minecraft</h1>
+    <p class="post-meta">May 5, 2020</p>
+  </header>
+
+  <article class="post-content">
+    <p>This blog explains my thoughts behind creation of my project called <a href="https://github.com/ashutoshbsathe/scarpet-nn">scarpet-nn</a> which allows you to implement binarized neural nets in Minecraft.</p>
+
+<p>I think neural network in Minecraft is a cool idea because it opens a door to so many new possibilities in-game. Think of custom maps where mapmakers can hide a secret passage or rooms which are accessible only when you draw certain pattern on walls, and the in-game neural network recognizing it ! We can have games where each stage completion computes output of a layer of your neural network and so if you complete the  stages in wrong order, you obviously get wrong answers. We can have multiplayer games where one team modifies the neural network activations to change the output of neural network while the other team changes the weights of the neural network to make sure output does not change. More than this, I think just visualizing the neural network calculating results block by block in Minecraft would be very satisfying to watch too !</p>
+
+<h2 id="am-i-the-first-to-think-of-this-">Am I the first to think of this ?</h2>
+
+<p>No, ofcourse not. <em>There’s always someone who has thought of the same thing before you (ALWAYS)</em></p>
+
+<p>On some quick googling, I found an implementation of an <a href="https://www.reddit.com/r/Minecraft/comments/ak22ur/neural_network_for_handwritten_digit_recognition/">MNIST ConvNet in Minecraft</a>. It was decently fast, but required a ton of memory, wasn’t server friendly at all and used more than 2 million (!!!) command blocks to implement it. This meant that if some custom mapmaker wanted to use this in their server, they would need compute comparable to a dedicated data center to run the server smoothly. Moreover, it also doesn’t offer us flexibility to reconfigure the neural network, which means if you wanted to implement some new neural network, you would need to rewrite/regenerate all those millions of command blocks. Plus, there is no nice block-by-block visualization possibilities in this.</p>
+
+<h2 id="design">Design</h2>
+
+<p>I decided to set limit my scope for implementing only conv and fully connected layers (for now). These layers are easy to implement since they only need multiplication and addition operations. My initial idea was to take a CPU designed in Minecraft (such as this <a href="https://www.youtube.com/watch?v=5Fwy4jUJUoM">amazing 32 bit FPU</a>), take a memory designed in Minecraft (like <a href="https://www.youtube.com/watch?v=7NaWSnlcr8w">this video</a>), connect them using some redstone magic and then finally build a redstone circuit that properly reads the model from memory, executes it and stores the result back in memory.</p>
+
+<p>However, this was a hell lot more tedious than I initially imagined. The design of memory wasn’t fully scalable, this would mean that users would need to rewire the memory to CPU which isn’t exactly nice considering design principles. But most importantly, the FPU or CPU wasn’t just fast enough. Each operation on that CPU or FPU took about 1.5-2s to calculate on my descently fast CPU. This was obvious due to limited in-game capabilities. Note when I rant about 1.5-2s for computing answer using the FPU, it’s only in context of neural networks. From electrical engineering standpoint, the <a href="https://www.youtube.com/watch?v=5Fwy4jUJUoM">FPU</a> I am referring to is very elegantly designed.</p>
+
+<p>So after this I thought of quantization of neural network weights to use less bits to represent each number in weights and activations of the nerual net. Better yet, I opted for <a href="https://arxiv.org/abs/1602.02830">binarized neural network</a>. These use only a single bit for representing every number in computation of neural networks. Because of this, multiplication and addition operations become a lot easier.</p>
+
+<h3 id="binarized-multiplication">Binarized Multiplication</h3>
+<p>Following table describes the multiplication of 2 weights or activations when binarized to +1 or -1.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><script type="math/tex">A</script></th>
+      <th style="text-align: center"><script type="math/tex">B</script></th>
+      <th style="text-align: center"><script type="math/tex">C = A * B</script></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">-1</td>
+      <td style="text-align: center">-1</td>
+      <td style="text-align: center">1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">-1</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">-1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">-1</td>
+      <td style="text-align: center">-1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In bit representation, this multiplication resembles XNOR gate.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><script type="math/tex">A</script></th>
+      <th style="text-align: center"><script type="math/tex">B</script></th>
+      <th style="text-align: center"><script type="math/tex">C = A * B</script></th>
+      <th style="text-align: center"><script type="math/tex">C = \overline{A \oplus B}</script></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This means that, in BNNs multiplication operation reduces to simple XNOR as opposed to <a href="https://en.wikipedia.org/wiki/Floating-point_arithmetic#Multiplication_and_division">complicated floating point multiplication algorithm</a>. We can do XNOR operation in Minecraft as follows: (based on <a href="https://www.youtube.com/watch?v=DR9BwuaPPH4">this very compact design</a>)</p>
+
+<center>
+<img src="/files/blog_assets/neural-nets-in-minecraft/redstone-xnor-minecraft.png" alt="redstone xnor minecraft" width="100%" />
+</center>
+
+<h3 id="binarized-reduceaddition">Binarized Reduce/Addition</h3>
+<p>Reduce operation typically refers to adding up all elements of a tensor along some specific direction. In case of BNNs, since all the operands are either +1 or -1, we only need sign of the answer as the output of reduction operation. In bit representation, this translates to bitcounting operation. Therefore, to reduce a vector of length <script type="math/tex">l</script> of 1s and 0s, we only need to count number of 1s in the vector in some variable say <code class="language-plaintext highlighter-rouge">bitcount</code>. Then, output of reduction operation is bit <code class="language-plaintext highlighter-rouge">1</code> (+1) if <script type="math/tex">(bitcount \geq l/2)</script> and bit <code class="language-plaintext highlighter-rouge">0</code>(-1) otherwise.</p>
+
+<p>I couldn’t find a Minecraft version of this so I decided to design my own as follows:</p>
+
+<center>
+<img src="/files/blog_assets/neural-nets-in-minecraft/redstone-reducer-minecraft.png" alt="redstone reducer minecraft" width="100%" />
+</center>
+
+<p>This reducer architecture unfortunately <strong>cannot work for more than 16 bits</strong>. That being said I’m not a big redstone guy and I can’t even make a 4x4 flush piston door without looking up a tutorial. Maybe someone with deeper understanding of redstone mechanics can make a much much better job at this.</p>
+
+<h2 id="scarpet---a-programming-language-in-minecraft">Scarpet - A programming language <em>in</em> Minecraft</h2>
+<p>While the reducer I designed will work for small neural networks (only 3x3 conv filters, not more than 16 in any dimension etc.), I wanted to support more general and bigger neural networks. Scarpet is an in-game, functional-like programming language developed by <a href="https://github.com/gnembon">gnembon</a>. While scarpet requires <a href="https://github.com/gnembon/fabric-carpet">carpetmod</a> (which means our neural networks won’t be pure vanilla Minecraft-y), it is an excellent choice for building neural nets because it is server friendly and has a nifty <a href="https://github.com/gnembon/fabric-carpet/blob/master/docs/scarpet/Full.md#game_tickmstime"><code class="language-plaintext highlighter-rouge">game_tick()</code></a> function. <a href="https://github.com/gnembon/fabric-carpet/blob/master/docs/scarpet/Full.md#game_tickmstime"><code class="language-plaintext highlighter-rouge">game_tick()</code></a> allows you to essentially pause the game for specified amount of time. This means our block by block visualization requirement is also fulfilled. <a href="https://github.com/ashutoshbsathe">gnembon</a> does an excellent job at explaining the language with the <a href="https://github.com/gnembon/fabric-carpet/blob/master/docs/scarpet/Full.md">documentation of scarpet</a>.</p>
+
+<h2 id="representation-of-neural-nets">Representation of Neural Nets</h2>
+<p>With scarpet as our tool, we need to focus on representating binarized neural networks in Minecraft. We can set 2 different blocks for representing <script type="math/tex">+1</script> and <script type="math/tex">-1</script> in weights/activations. Moreover, I also thought it would be nice to be able to convert my PyTorch binarized neural network into my Minecraft representation. Therefore, I decided to generate a <a href="https://github.com/maruohon/litematica">litematica</a> schematic for every layer of my neural network. Litematica allows you to put a schematic of block arrangements anywhere in the world, this schematic is extremely handy to recreate the block arrangement in the world.</p>
+
+<p>This means we need a program that can take in our PyTorch model and output a litematica schematic (the <code class="language-plaintext highlighter-rouge">.litematica</code> file) for every layer for us to build in our world. Unfortunately, the <code class="language-plaintext highlighter-rouge">.litematica</code> format isn’t very well documented. Thankfully with the help of the developer <a href="https://github.com/maruohon">maruohon</a> and the <a href="https://pypi.org/project/nbtlib/">NBT data exploration library</a> I was able to write to the <code class="language-plaintext highlighter-rouge">.litematica</code> file properly. The code for this module is available in the <a href="https://github.com/ashutoshbsathe/scarpet-nn/tree/master/nn-to-litematica">nn-to-litematica</a> folder on my <a href="https://github.com/ashutoshbsathe/scarpet-nn">scarpet-nn</a> repo. (note that <a href="https://github.com/ashutoshbsathe/scarpet-nn/tree/master/nn-to-litematica">nn-to-litematica</a> currently supports only conv and fc layers without bias)</p>
+
+<p>I have written more about the litematica schematic generation rules in the <a href="https://ashutoshbsathe.github.io/scarpet-nn/nn-to-litematica/">documentation of scarpet-nn</a>. With this much progress, it was just a matter of time to write some neat, modularized code for scarpet apps that implement our intended functionality.</p>
+
+<h2 id="results">Results</h2>
+<p>After fixing up a representation, I was able to build and run the neural network in my Minecraft world. But it was extremely boring to modify input block by block. To solve this, I decided to write a scarpet app called <a href="https://github.com/ashutoshbsathe/scarpet-nn/blob/master/scarpet-apps/drawingboard.sc"><code class="language-plaintext highlighter-rouge">drawingboard</code></a> that lets you draw at the input layer by right clicking on it with any sword. I implemented a small binary image classifier that could detect digits <code class="language-plaintext highlighter-rouge">0</code> and <code class="language-plaintext highlighter-rouge">1</code> from the <a href="http://yann.lecun.com/exdb/mnist/">MNIST dataset</a>.</p>
+
+<p>See the working classifier demo:</p>
+<div class="yt-iframe-container">
+<iframe src="https://www.youtube.com/embed/LVmOcAYbYdU" frameborder="0" allowfullscreen="" class="yt-iframe-video"></iframe>
+</div>
+
+<hr />
+
+<p>Block by block visualization</p>
+<div class="yt-iframe-container">
+<iframe src="https://www.youtube.com/embed/KEcUKpBTk8M" frameborder="0" allowfullscreen="" class="yt-iframe-video"></iframe>
+</div>
+
+<p><br /><br /></p>
+
+<p>So this is where I end my blog. Feel free to reach me for suggestions/comments/questions/your own neural networks built in Minecraft. I would love to hear from you!</p>
+
+  </article>
+
+  
+
+</div>
+
+      </div>
+    </div>
+
+    <footer>
+
+  <div class="wrapper">
+    &copy; Copyright 2020 Ashutosh Sathe.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+    
+        Last updated: May 1, 2020.
+    
+  </div>
+
+</footer>
+
+
+    <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+
+
+
+  </body>
+
+</html>
