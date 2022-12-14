@@ -8,7 +8,7 @@
 
 <title>
 
-  projects |
+  papers |
 
 
   Ashutosh  Sathe
@@ -37,7 +37,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="/projects/">
+<link rel="canonical" href="/papers/">
 
 <!-- JQuery -->
 <!-- jQuery -->
@@ -127,20 +127,20 @@
           
           
           
-          <li class="nav-item ">
+          <li class="nav-item active">
               <a class="nav-link" href="/papers/">
                 papers
+                
+                <span class="sr-only">(current)</span>
                 
               </a>
           </li>
           
           
           
-          <li class="nav-item active">
+          <li class="nav-item ">
               <a class="nav-link" href="/projects/">
                 projects
-                
-                <span class="sr-only">(current)</span>
                 
               </a>
           </li>
@@ -177,59 +177,129 @@
       <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">projects</h1>
-    <p class="post-description">Some of the things I have worked on in the past</p>
+    <h1 class="post-title">papers</h1>
+    <p class="post-description">List of my papers</p>
   </header>
 
   <article>
-    <p>I occasionally contribute to <a href="https://github.com/BorealisAI/advertorch">BorealisAI/advertorch</a>. You can see pull requests made by me <a href="https://github.com/BorealisAI/advertorch/pulls?utf8=%E2%9C%93&amp;q=is%3Apr+author%3Aashutoshbsathe+">here</a>.</p>
+    <!-- _pages/papers.md -->
+<div class="publications">
+  <h2 class="year">2022</h2>
+  <ol class="bibliography"><li><div class="row">
+  <div class="col-sm-2 abbr">
+  
+    
+    <abbr class="badge">EMNLP</abbr>
+    
+  
+  </div>
 
-<hr />
+  <div id="awasthi-etal-diverse-2022" class="col-sm-8">
+    
+      <div class="title">Diverse Parallel Data Synthesis for Cross-Database Adaptation of Text-to-SQL Parsers</div>
+      <div class="author">
+        
+          
+          
+          
+          
+            
+              
+                
+                
+          
+          
+          
+            
+              
+                
+                  <a href="https://www.cse.iitb.ac.in/~awasthi" target="_blank">Abhijeet Awasthi</a>,
+                
+              
+            
+          
+        
+          
+          
+          
+          
+          
+          
+            
+              
+                <em>Ashutosh Sathe</em>,
+              
+            
+          
+        
+          
+          
+          
+          
+            
+              
+                
+                
+          
+          
+          
+            
+              
+                
+                  and <a href="https://www.cse.iitb.ac.in/~sunita" target="_blank">Sunita Sarawagi</a>
+                
+              
+            
+          
+        
+      </div>
 
-<h4 id="yacv-yet-another-compiler-visualizer-demo-github-docs">yacv: Yet Another Compiler Visualizer <a href="https://www.youtube.com/watch?v=BozB0O0__Qg">[demo]</a> <a href="https://github.com/ashutoshbsathe/yacv">[GitHub]</a> <a href="https://ashutoshbsathe.github.io/yacv">[docs]</a></h4>
-<p><code class="language-plaintext highlighter-rouge">yacv</code> is a tool for visualizing step-by-step parsing process of typical LL(1) and LR parsers. This python package can be used for visualizing syntaxtree, LR state automaton, parsing table and step-by-step parsing process given a context free grammar and a string</p>
+      <div class="periodical">
+      
+        <em>In Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing</em>
+      
+      
+        2022
+      
+      </div>
+    
 
-<hr />
+    <div class="links">
+    
+      <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+    
+    
+      <a href="http://arxiv.org/abs/https://arxiv.org/abs/2210.16613" class="btn btn-sm z-depth-0" role="button" target="_blank">arXiv</a>
+    
+    
+    
+    
+    
+    
+    
+      <a href="https://github.com/awasthiabhijeet/refill" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>
+    
+    
+    
+    
+    </div>
 
-<h4 id="scarpet-nn-github-docs">scarpet-nn <a href="https://github.com/ashutoshbsathe/scarpet-nn">[GitHub]</a> <a href="https://ashutoshbsathe.github.io/scarpet-nn">[docs]</a></h4>
-<p>Tools and libraries for running binarized neural networks in Minecraft. The API can be used to build any aribtrary architecture of binarized neural network in Minecraft. scarpet-nn automatically generates schematics for Minecraft neural nets based on PyTorch checkpoint. See the documentation page for more info and demonstration.</p>
+    <!-- Hidden abstract block -->
+    
+    <div class="abstract hidden">
+      <p>Text-to-SQL parsers typically struggle with databases unseen during the train time. Adapting parsers to new databases is a challenging problem due to the lack of natural language queries in the new schemas. We present ReFill, a framework for synthesizing high-quality and textually diverse parallel datasets for adapting a Text-to-SQL parser to a target schema. ReFill learns to retrieve-and-edit text queries from the existing schemas and transfers them to the target schema. We show that retrieving diverse existing text, masking their schema-specific tokens, and refilling with tokens relevant to the target schema, leads to significantly more diverse text queries than achievable by standard SQL-to-Text generation methods. Through experiments spanning multiple databases, we demonstrate that fine-tuning parsers on datasets synthesized using ReFill consistently outperforms the prior data-augmentation methods.</p>
+    </div>
+    
 
-<hr />
+    <!-- Hidden bibtex block -->
+    
+  </div>
+</div>
+</li></ol>
 
-<h4 id="pop1--pop2">POP1 ↔ POP2</h4>
-<p>A CycleGAN based approach for converting gameplay footage of PC game <a href="https://en.wikipedia.org/wiki/Prince_of_Persia_(1989_video_game)/">Prince of Persia 1</a> to look like <a href="https://en.wikipedia.org/wiki/Prince_of_Persia_2:_The_Shadow_and_the_Flame">Prince of Persia 2</a>. The focus was mainly on gathering relevant data, cleaning it, preprocessing it and training a CycleGAN on the data. [My First Ever Machine Learning Project]</p>
 
-<hr />
+</div>
 
-<h4 id="pytorch-implementation-of-adversarial-reprogramming-github">PyTorch Implementation of Adversarial Reprogramming <a href="https://github.com/ashutoshbsathe/adversarial_reprogramming">[GitHub]</a></h4>
-<p>Simple implementation of adversarial reprogramming (<a href="https://arxiv.org/abs/1806.11146">Elsayed <em>et al.</em></a>) in PyTorch. The experiment consists of training a ResNet18 on CIFAR-10, the reprogramming it to classify MNIST as well. The paper mostly reprograms networks trained on ImageNet which has input size of 224x224. This leaves a lot of room for the reprogram. However, in my CIFAR10 to MNIST experiment, MNIST images need to be rescaled down even further to 14x14 or 16x16 to get 90%+ accuracy.</p>
-
-<hr />
-
-<h4 id="spreaddit-github">Spreaddit <a href="https://github.com/ashutoshbsathe/spreaddit">[GitHub]</a></h4>
-<p>Spreaddit is an open source, lightweight spreadsheet editor written completely in C. It can be used via command line or GUI mode. The GUI was made using GTK+3. Following features were implemented:</p>
-
-<ul>
-  <li>Read/write ODS/CSV files</li>
-  <li>Sorting the file on specific column</li>
-  <li>Arithmetic expression evaluation based on cell data</li>
-</ul>
-
-<p>This was course project for “Data Structures and Algorithms” course and was awarded 100% grade</p>
-
-<hr />
-
-<h4 id="advancedhtmlxblock-github">AdvancedHTMLXBlock <a href="https://github.com/ashutoshbsathe/AdvancedHTMLXBlock">[GitHub]</a></h4>
-<p>AdvancedHTMLXBlock is an XBlock plugin for <a href="https://open.edx.org/">OpenEDX</a> environment. It allows course creators to embed full HTML content with CSS/JS into their course. The XBlock also features an advanced code editor on the instructors’ side to help maintain the HTML content easily. The new editor supports code indentation, autocomplete features and also comes with a live preview. This project was done as a part of my internship at IIT Bombay.</p>
-
-<hr />
-
-<h4 id="photon-kernel">Photon Kernel</h4>
-<p>Photon is an android kernel focussed on stability and performance. It supports latest android versions on Motorola Moto E and Xiaomi Mi A1. The kernel includes all the upstream patches from <code class="language-plaintext highlighter-rouge">linux-stable</code> and allows users to choose from aftermarket CPU/GPU governors, I/O schedulers etc. [This project is taken off of github and is maintained exclusively via Telegram. Please drop me an email for a testing build]</p>
-
-<!--
-
--->
 
   </article>
 

@@ -12,6 +12,9 @@
 <loc>/</loc>
 </url>
 <url>
+<loc>/papers/</loc>
+</url>
+<url>
 <loc>/projects/</loc>
 </url>
 <url>
@@ -20,7 +23,7 @@
 </url>
 <url>
 <loc>/files/ashutosh_sathe_resume.pdf</loc>
-<lastmod>2021-07-24T12:38:41+05:30</lastmod>
+<lastmod>2022-12-14T21:02:16+05:30</lastmod>
 </url>
 <url>
 <loc>/files/fgsm_visualization.pdf</loc>
