@@ -1,6 +1,8 @@
 ![Visitors Stats](https://visitor-badge.laobi.icu/badge?page_id=ashutoshbsathe.ashutoshbsathe)
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ashutoshbsathe&theme=dark&count_private=true&include_all_commits=true&hide=issues)
 
+![New github stats](https://stats-gray.vercel.app/api?username=ashutoshbsathe&show_icons=true&count_private=true&include_all_commits=true&title_color=83d1a2&icon_color=9ca1b8&text_color=9ca1b8&bg_color=0f0f13)
+
 # al-folio
 
 [![build status](https://travis-ci.org/alshedivat/al-folio.svg?branch=master)](https://travis-ci.org/alshedivat/al-folio)
