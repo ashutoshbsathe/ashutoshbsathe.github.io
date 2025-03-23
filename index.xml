@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ashutosh Sathe</title>
+    <link>https://ashutoshbsathe.github.io/</link>
+    <description>Recent content on Ashutosh Sathe</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>ashutoshbsathe @ {year}</copyright>
+    <lastBuildDate>Thu, 01 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ashutoshbsathe.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Parsing the parser</title>
+      <link>https://ashutoshbsathe.github.io/blog/parsing-the-parser/</link>
+      <pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://ashutoshbsathe.github.io/blog/parsing-the-parser/</guid>
+      <description>Visualizing parsers using manim</description>
+    </item>
+    <item>
+      <title>Building neural nets in Minecraft</title>
+      <link>https://ashutoshbsathe.github.io/blog/neural-nets-in-minecraft/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://ashutoshbsathe.github.io/blog/neural-nets-in-minecraft/</guid>
+      <description>Minecraft is a sandbox game, so theoretically everything&amp;rsquo;s possible, right ?</description>
+    </item>
+  </channel>
+</rss>
