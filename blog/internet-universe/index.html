@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/png" href="https://ashutoshbsathe.github.io/favicon.ico" />
+<meta property="og:url" content="https://ashutoshbsathe.github.io/blog/internet-universe/">
+  <meta property="og:site_name" content="Ashutosh Sathe">
+  <meta property="og:title" content="If you want to browse the internet, you must first invent the universe">
+  <meta property="og:description" content="An unnecessarily detailed description of what happens every time you google something">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-03-30T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-30T00:00:00+00:00">
+
+<title>If you want to browse the internet, you must first invent the universe | Ashutosh Sathe</title>
+
+      <link rel="stylesheet" href="/css/main.min.698bc3e32b756e1f5322e47c0a024ef4fef02de7ddbc5af443455430b5482f03.css" integrity="sha256-aYvD4yt1bh9TIuR8CgJO9P7wLefdvFr0Q0VUMLVILwM=" crossorigin="anonymous">
+  
+        <link rel="stylesheet" href="/css/palette/absathe.min.3789087cdc680485b8c6d9c8615545b611f0490be5ac06d2c45d1defefc59cf5.css" integrity="sha256-N4kIfNxoBIW4xtnIYVVFthHwSQvlrAbSxF0d7&#43;/FnPU=" crossorigin="anonymous">
+
+      <script src="/js/main.86bb3d8e6f46df0fc97c2731e6b99175a13b87a4086acf578ff9b6992fcf32c1.js" integrity="sha256-hrs9jm9G3w/JfCcx5rmRdaE7h6QIas9Xj/m2mS/PMsE=" crossorigin="anonymous"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>">
+
+</head>
+
+  
+<body
+>
+  
+  <main>
+    
+  <div class="container pt-5">
+    <div class="row mt-5 pt-5">
+      
+  <nav aria-label="breadcrumb" class="small">
+    <ol class="breadcrumb fw-bold">
+    <li class="breadcrumb-item">
+      <a href="/"
+        
+      >home</a>
+      
+    </li>
+    <li class="breadcrumb-item">
+      <a href="/about"
+        
+      >about</a>
+      
+    </li>
+    <li class="breadcrumb-item">
+      <a href="/papers"
+        
+      >papers</a>
+      
+    </li>
+    <li class="breadcrumb-item">
+      <a href="/blog"
+        class="text-decoration-underline link-offset-3"
+        
+      >blog</a>
+      
+    </li>
+    </ol>
+  </nav>
+
+    </div>
+    
+    <div class="d-none d-lg-block position-fixed end-0 small toc">
+      <p class="toc-title">
+        Table of Contents:
+      </p>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-enter-moment">The &ldquo;Enter&rdquo; moment</a></li>
+    <li><a href="#fetching-the-webpage-from-googlecom">Fetching the webpage from google.com</a></li>
+    <li><a href="#inside-the-google-land">Inside the Google land</a></li>
+    <li><a href="#rendering-googles-response">Rendering Google&rsquo;s response</a></li>
+    <li><a href="#prequel-how-did-we-even-get-here">Prequel: How did we even get here?</a>
+      <ul>
+        <li><a href="#the-spark-of-life-booting-up">The spark of life: booting up</a></li>
+        <li><a href="#setting-the-stage-starting-the-desktop-environment">Setting the stage: starting the desktop environment</a></li>
+        <li><a href="#the-click-launching-firefox">The click: launching firefox</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-heart-how-to-cpu">The heart: How to CPU</a>
+      <ul>
+        <li><a href="#memory-hierarchy">Memory hierarchy</a></li>
+        <li><a href="#instruction-pipelining">Instruction pipelining</a></li>
+        <li><a href="#fabricating-a-cpu-from-scratch">Fabricating a CPU (from scratch)</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#references--interesting-tangents">References + interesting tangents</a></li>
+  </ul>
+</nav>
+    </div>
+    
+    <div class="post">
+      <header class="mb-4">
+        <h1>If you want to browse the internet, you must first invent the universe</h1>
+        
+        
+        <div aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item small">
+              <time datetime="2025-03-30T00:00:00&#43;00:00">March 30, 2025</time>
+            </li>
+            <li class="breadcrumb-item small">
+              21 minutes
+            </li>
+          </ol>
+        </div>
+      </header>
+      <article>
+        <p>Let&rsquo;s imagine the scene: you&rsquo;re at your computer, browser open to google.com. You type &ldquo;attention is all you need&rdquo; into the search box and decisively hit &ldquo;Enter&rdquo;. Barely a moment later, your browser gives you this:</p>
+<p><img src="/blog_assets/computers-to-silicon-atoms/final_result.png" alt="google result"></p>
+<p>Today, I thought to myself: can I <em><strong>precisely</strong></em> describe <em>everything</em> that unfolds in the instant after I hit &ldquo;Enter&rdquo;? This blog post is my expedition to list down <em>&ldquo;every single&rdquo;</em> step involved in converting that keystroke into the polished webpage Google delivers. This means tracing and noting down the intricate dance of all the systems, mechanisms, and protocols I know are part of the show. Think of it as recursively asking &ldquo;how did <em>that</em> happen?&rdquo; until I stumble upon a topic that is completely beyond my grasp. Ideally, this recursive journey bottoms out at silicon atoms, given my computer science background (and lack of formal training elsewhere). Though, truth be told, we might hit some dead ends much sooner.</p>
+<p>The title takes inspiration from <a href="https://en.wikipedia.org/wiki/Carl_Sagan">Carl Sagan</a>&rsquo;s famous quote: &ldquo;If you wish to make an apple pie from scratch, you must first invent the universe&rdquo;. Every act of creation builds upon something else. A pie demands flour. Make your own flour? You&rsquo;ll need wheat and milling gear. For those, you need farms and metal, requiring soil and minerals. To <em>truly</em> claim you made it from scratch, you&rsquo;d need to conjure the dirt and minerals themselves. Forging iron necessitates a star &ldquo;cooking&rdquo;&quot; lighter elements. And to birth a star&hellip; well, you&rsquo;re tracing back to the <a href="https://www.reddit.com/r/askscience/comments/gwuv7/comment/c1qvrty/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button">Big Bang itself</a>.</p>
+<p><small> <strong>A gentle disclaimer:</strong> This blog is written by a relatively naive, fairly recent computer science graduate. If you spot inaccuracies or think an explanation could use better grounding, please reach out via email or twitter. </small></p>
+<h2 id="the-enter-moment">The &ldquo;Enter&rdquo; moment</h2>
+<p>The instant my finger depresses the &ldquo;Enter&rdquo; key after typing the query, my browser&rsquo;s (Firefox, in this case) &ldquo;web engine&rdquo; is going to take note of that. It likely executes a bunch of JavaScript code designed to redirect me to <a href="https://www.google.com/search?q=attention+is+all+you+need">https://www.google.com/search?q=attention+is+all+you+need</a>. This JavaScript likely performs some additional housekeeping too (dealing with cookies, perhaps some tracking mechanisms) if I&rsquo;m not logged into Google. Firefox uses <a href="https://firefox-source-docs.mozilla.org/overview/gecko.html">Gecko</a> as its rendering engine, which gets its JavaScript engine from <a href="https://firefox-source-docs.mozilla.org/js/index.html#spidermonkey">SpiderMonkey</a> about JavaScript runtimes and how they work. I tried to dig into the source code for both, hoping to unearth some meaningful insights. I even peeked into the ambitious <a href="https://github.com/SerenityOS/serenity">SerenityOS</a> project, which features a browser built entirely from the ground up. Alas, the sheer complexity of these internals is beyond my small brain &ndash; a somewhat humbling start to our exhaustive inventory.</p>
+<p>With that, let&rsquo;s follow Firefox as it starts retrieving the webpage at <a href="https://www.google.com/search?q=attention+is+all+you+need">https://www.google.com/search?q=attention+is+all+you+need</a>.</p>
+<h2 id="fetching-the-webpage-from-googlecom">Fetching the webpage from google.com</h2>
+<p>Gecko delegates all its networking duties to <a href="https://firefox-source-docs.mozilla.org/networking/index.html">Necko</a>. Since we were already looking at google.com when &ldquo;Enter&rdquo; was hit, Firefox almost certainly has google.com&rsquo;s IP address cached. If it didn&rsquo;t, a DNS request would be made to the configured DNS server. In my rather standard home setup, my PC connects to my internet router via an <a href="https://en.wikipedia.org/wiki/Modular_connector#8P8C">RJ45 connector</a> cable, and the router conveniently doubles as my DNS server. The DNS request itself is just a <a href="https://en.wikipedia.org/wiki/Domain_Name_System#DNS_message_format">specially structured packet</a> sent using the <a href="https://en.wikipedia.org/wiki/Internet_Protocol">Internet Protocol</a>.</p>
+<p>Once the IP address is secured, Firefox will likely issue an HTTP <code>GET</code> (or perhaps a <code>POST</code>?) request with the path <code>/search?q=attention+is+all+you+need</code>. My understanding is that Necko handles the upper layers of the <a href="https://en.wikipedia.org/wiki/OSI_model">OSI model</a> (layers 7, 6, and 5). Necko relies on <a href="https://en.wikipedia.org/wiki/Network_Security_Services">NSS</a> for the cryptographic heavy lifting of TLS. The transport layers and everything below are abstracted away by functions like <a href="https://firefox-source-docs.mozilla.org/nspr/reference/pr_opentcpsocket.html#pr-opentcpsocket">NSPR&rsquo;s <code>PR_OpenTCPSocket</code></a>. On Linux, I suspect these are essentially wrappers around the familiar POSIX-style <code>socket()</code> APIs. I believe these APIs primarily manage layers 5, 4, and sometimes layer 3. Layer 3 and downwards ideally becomes the domain of hardware &ndash; i.e.  your network interface card (NIC), whether it&rsquo;s a dedicated card or integrated onto the motherboard. The CPU offloads the data to the network card using <a href="https://stackoverflow.com/a/45407376">&ldquo;direct memory access&rdquo; (DMA)</a>, a common technique for data transfers involving network cards, storage devices, and graphics cards.</p>
+<p>The NIC itself would take charge of robustly translating digital data into the actual physical signals transmitted over the cable. Several excellent online guides demonstrate the circuitry required to modulate signals on the physical medium to correctly encode data. So, while intricate, there (likely) isn&rsquo;t any deep dark magic here (unlike the CPU) in the <em>signaling</em> itself. However, this raw &ldquo;dumb&rdquo; <em>physicality</em> is augmented by many smart routing algorithms enabling networks to dynamically discover their topology and calculate optimal paths to each other. These algorithms (like &ldquo;link state routing&rdquo;) typically run when the network changes (e.g., a new device joins), so it&rsquo;s unlikely any routing tables were updated during our specific search query journey.</p>
+<p>So far, we&rsquo;ve pressed &ldquo;Enter&rdquo;, established a TCP connection to Google and our request has just been encoded into electrical pulses, sent down the wire, and arrived at Google&rsquo;s doorstep.</p>
+<h2 id="inside-the-google-land">Inside the Google land</h2>
+<p>When our request reaches the server associated with <code>google.com</code> in the DNS records, it very likely doesn&rsquo;t hit the &ldquo;actual server&rdquo; (with all the search index data) directly. Instead, it first encounters a &ldquo;load balancer&rdquo;. As the name implies, the load balancer acts like a traffic director, selecting an &ldquo;appropriate&rdquo; backend server to handle the query before a response is sent back. The criteria for &ldquo;appropriate&rdquo; can vary &ndash; perhaps geographic proximity, current server load, or a simple round-robin assignment. Unfortunately, finding concrete details on the exact implementations and how they seamlessly manage this handoff (ensuring our browser still sees <code>google.com</code>, not the specific backend server&rsquo;s IP) proved challenging. I&rsquo;ve included some links in the references that delve into this, but battle-tested implementations aren&rsquo;t openly documented.</p>
+<p>Notice too that our request URL &ndash; <code>/search?q=attention+is+all+you+need</code> &ndash; contains the query itself. This structure makes the corresponding response easily cacheable. According to a <a href="https://blog.google/products/search/search-language-understanding-bert/">Google blog post from 2019</a>, roughly 15% of the queries they receive are novel, ones they haven&rsquo;t encountered before. For our specific query, &ldquo;attention is all you need,&rdquo; it&rsquo;s highly probable that Google can instantly serve a cached HTML response.</p>
+<p>But what <em>might</em> transpire for those 15% of fresh queries? The exact inner workings are Google&rsquo;s secret sauce, naturally. But dusting off some information retrieval concepts can offer an educated guess. Document retrieval often relies on an inverted index &ndash; essentially a map where keys are keywords and values are lists of documents containing those keywords. Given a query, Google looks up the keywords to fetch a set (by merging sets of documents from individual keyword) of potentially relevant documents. Then, various metrics are applied to rank these documents &ndash; factors like &ldquo;how many query keywords appear in a document, adjusted for document length&rdquo;. Google likely selects the top 10-15 (along with 3-4 ads, sigh) for the first page. Alongside relevance, page &ldquo;importance&rdquo; is critical. A Wikipedia page, for instance, referenced by countless other sites, carries more weight. PageRank is the famous automated system for gauging this importance. The original algorithm proposed by Larry Page hasn&rsquo;t been used since 2006; Google later patented a new approach, called <a href="https://patents.google.com/patent/US9165040B1/en">PageRank 2.0</a> which is also possibly obsolete by now.</p>
+<p>Both the massive inverted index and the data underpinning the importance calculations likely reside in a high-performance, fault-tolerant distributed database system like Google&rsquo;s own <a href="https://cloud.google.com/spanner">&ldquo;Spanner&rdquo;</a>. So, for those uncached 15% queries, Google probably performs an inverted index lookup, ranks the results using its importance mechanism, and serves the top results (sprinkled with a few ads, naturally). Since 2019, Google has also incorporated powerful neural networks like BERT to enhance the <em>quality</em> (not necessarily the speed) of search results. Whatever the precise steps, Google very likely operates at near-peak computational efficiency across this entire pipeline. And you can bet this newly computed result (along with many intermediate and partial results) are now aggressively cached for future use.</p>
+<h2 id="rendering-googles-response">Rendering Google&rsquo;s response</h2>
+<p>Having identified the relevant documents, Google will quickly put them into an HTML response and send it back across the internet. As this response travels back, our browser initially paints the designated &ldquo;canvas&rdquo; area as blank, often displaying a spinning animation &ndash; the universal sign for &ldquo;hang tight&rdquo;. The network stack within our PC and browser diligently strips away the protocol layers, verifies the integrity of the data, and hands the raw HTML content to Gecko. Gecko then parses this HTML and begins the process of fetching any additional resources referenced within it &ndash; external CSS files, JavaScript code, fonts, image thumbnails, and so on. Simultaneously, it starts &ldquo;painting&rdquo; the visual representation onto the browser window in front of me. This display iteratively refines itself as more dependent resources arrive and are processed. Once Gecko determines that all necessary steps to render the page are complete, it halts the spinner animation. I can now scroll through the results and continue my work. All this process likely only took several 100 milliseconds to complete.</p>
+<h2 id="prequel-how-did-we-even-get-here">Prequel: How did we even get here?</h2>
+<p>On my system, the journey began when I pressed the power button. My computer booted into its operating system &ndash; Arch Linux with the KDE desktop environment. Then, using my mouse, I navigated the cursor to the &ldquo;Firefox&rdquo; icon and clicked it once, eventually landing on google.com. <!-- Specifically, my computer has an x86 CPU (AMD Ryzen 5 5600X), an NVIDIA RTX 3060 GPU, 32 GB RAM and 2 TB storage formatted with ext4 file system. --></p>
+<h3 id="the-spark-of-life-booting-up">The spark of life: booting up</h3>
+<p>Pressing the power button triggers the CPU to execute specific instructions embedded in the motherboard&rsquo;s firmware, initiating a cascade of system initializations. A key step is the <a href="https://en.wikipedia.org/wiki/Power-on_self-test">&ldquo;power-on self-test&rdquo; (POST)</a>. Once these checks pass, the CPU jumps to a predefined &ldquo;reset vector&rdquo; address in the flash memory, launching a specific program &ndash; UEFI (Unified Extensible Firmware Interface) in my case. UEFI performs its own checks, verifying that essential hardware &ndash; disks, keyboard controllers, display adapters, even <a href="https://en.wikipedia.org/wiki/Network_booting">network controllers</a> (for network booting scenarios) &ndash; is present and responding correctly before proceeding. The precise mechanism for these checks is a bit unclear to me, but I imagine it involves sending predefined signals over specific motherboard buses and verifying the expected responses. The intricacies of &ldquo;Secure Boot&rdquo; and what happens if UEFI fails to validate the signature of an EFI binary are also areas where my knowledge is fuzzy. We&rsquo;ll touch upon the CPU&rsquo;s inner workings later.</p>
+<p>Assuming UEFI gives the green light, it launches the designated EFI application &ndash; in my setup, the <a href="https://wiki.archlinux.org/title/REFInd">rEFInd boot manager</a>. The boot manager&rsquo;s job is to load the appropriate Linux kernel image (<a href="https://en.wikipedia.org/wiki/Vmlinux">vmlinux</a>). The kernel then undertakes much more sophisticated hardware detection and initialization. Many terms related to this phase and subsequent processes are still somewhat opaque to me; the <a href="https://wiki.archlinux.org/title/Arch_boot_process">Arch boot process page on ArchWiki</a> is my go-to reference for specifics. The crucial outcome is that the kernel eventually starts the very first userspace program, <code>/init</code>, assigning it the special Process ID (PID) 1.</p>
+<h3 id="setting-the-stage-starting-the-desktop-environment">Setting the stage: starting the desktop environment</h3>
+<p>The <code>/init</code> process orchestrates the startup of numerous system services and processes, including my desktop environment (DE), ultimately presenting me with a graphical user interface. The DE&rsquo;s code relies heavily on graphics drivers &ndash; either generic ones included with the kernel or proprietary drivers from the GPU manufacturer (NVIDIA, in my case) &ndash; to render visuals on my display. As I understand it, the DE describes the desired visual output using a set of <a href="https://developerhelp.microchip.com/xwiki/bin/view/software-tools/frameworks/mla/primitives/">&ldquo;graphics primitives&rdquo;</a> (lines, shapes, text, etc.) for individual windows. A <a href="https://en.wikipedia.org/wiki/Compositing_manager">&ldquo;compositor&rdquo;</a> then takes these individual window drawings and combines them into the final image displayed on the screen.</p>
+<p>The transformation of these abstract primitives into the grid of actual pixel colors your monitor understands is called <a href="https://en.wikipedia.org/wiki/Rasterisation">&ldquo;rasterization&rdquo;</a>. <a href="https://www.khronos.org/opengl/wiki/FAQ">OpenGL</a> (and its successors like Vulkan) provides a standardized API for specifying how rasterization-based rendering should behave. This means applications can target the OpenGL standard, and hardware manufacturers just need to provide drivers implementing that standard. The performance (both responsiveness and computational efficiency) of a desktop environment often hinges on using the appropriate graphics driver, as highlighted in the <a href="https://userbase.kde.org/Desktop_Effects_Performance">official KDE documentation</a>.</p>
+<h3 id="the-click-launching-firefox">The click: launching firefox</h3>
+<p>The DE constantly listens for user input from devices like the keyboard and mouse. It&rsquo;s important to remember that a DE, like any userspace application, doesn&rsquo;t directly access the raw interrupts or architecture specific opcodes from these devices. Every time you click a mouse button, press a key, or nudge your mouse, the input device sends an <em>interrupt</em>  to the CPU. The kernel intercepts this interrupt, identifies its source, and notifies the appropriate userspace program usually the one currently in focus or the window manager. If you&rsquo;re on Linux, try running <a href="https://cs.stackexchange.com/a/97128"><code>watch -n0.5 &quot;cat /proc/interrupts&quot;</code></a> in a terminal; you&rsquo;ll see fascinating statistics about the different interrupt types your CPU is handling.</p>
+<p>Most graphical programs, including my DE, operate within an event loop: an infinite cycle that renders the current visual state (&ldquo;frame&rdquo;) while simultaneously listening for incoming events (like interrupts). When a mouse click is registered at specific $(x, y)$ screen coordinates, I <em>assume</em> the DE consults the compositor to determine precisely <em>which</em> UI element (like an icon or button) should receive that click event. I say &ldquo;assume&rdquo; because I couldn&rsquo;t find a definitive source, but the compositor seems logically positioned to have the necessary information about screen layout. Since my click landed on the Firefox icon, the DE proceeds to request the operating system to launch the Firefox application, likely using a system call like <a href="https://man7.org/linux/man-pages/man2/execve.2.html"><code>execve(..)</code></a> or one of its variants.</p>
+<p>Loading Firefox involves the OS performing numerous critical tasks. The Firefox binary residing on my disk isn&rsquo;t statically linked (unlike the <code>vmlinux</code> kernel image); it depends on various system-level shared libraries (like the C standard library) to function. The OS is responsible for locating the Firefox executable file on the disk, reading its contents into memory, correctly mapping different sections of the executable (code, data) into the new process&rsquo;s address space, and linking it with the required shared libraries. This process touches upon several fundamental OS concepts: security, memory management (paging), process management (scheduling), and user/permission handling. Since we&rsquo;re just launching a common web browser, Linux will likely initialize the process structure, mark it as ready to run, and hand it over to the scheduler, which decides when and for how long this new Firefox process gets to execute its instructions on the CPU. Delving deeper here would mean revisiting core OS textbooks (see References).</p>
+<h2 id="the-heart-how-to-cpu">The heart: How to CPU</h2>
+<p>At its core, a CPU is a vast, intricate electrical circuit centered around an Arithmetic Logic Unit (ALU). Other key components include the control unit and Input/Output (I/O) units, following the classic von Neumann architecture. If you&rsquo;ve taken a basic digital electronics course, you&rsquo;ve likely seen how fundamental logic gates (AND, OR, NOT) can be combined to create structures like a full adder. The CPU implements basic arithmetic and logical operations using such circuits. Its immediate working memory consists of a small set of high-speed storage locations called registers, including a special one often called the accumulator.</p>
+<p>When the CPU encounters a binary instruction (like <code>addl $5, %eax</code>, which adds the constant value 5 to the <code>eax</code> register), the control unit electronically &ldquo;decodes&rdquo; it. This decoding process generates a sequence of control signals that open and close specific electrical pathways, directing data flow between registers, the ALU, and back. A system clock provides a synchronizing pulse; each rising edge of the clock signal triggers the next step in executing an instruction.</p>
+<h3 id="memory-hierarchy">Memory hierarchy</h3>
+<p>Operations like our example &ndash; adding a constant to a register, or adding two registers together &ndash; are typically lightning fast, often completing within a handful of clock cycles. However, complications arise whenever an instruction needs to access data stored in main memory (RAM). The memory controller and the RAM chips themselves are physically &ldquo;distant&rdquo; from the CPU core, meaning data takes a relatively long time to travel back and forth. To mitigate this latency, whenever the CPU requests data from a specific memory address, it usually fetches a small block of adjacent data (a &ldquo;cache line&rdquo;, often 64 bytes) along with it, storing this block in its own small, extremely fast onboard memory called the CPU cache. Building large, fast caches is expensive due to the required circuit complexity. Furthermore, main memory access can be slowed down even more if virtual memory (paging) is used (as it is on virtually all modern systems) and the required address translation isn&rsquo;t found in the Translation Lookaside Buffer (TLB) &ndash; a sort of cache for page table entries. Writing code that is mindful of this memory hierarchy can yield <a href="https://en.wikipedia.org/wiki/Matrix_multiplication_algorithm#Cache_behavior">massive performance gains</a> without needing a faster CPU or more cache!</p>
+<h3 id="instruction-pipelining">Instruction pipelining</h3>
+<p>Because of this inherent memory bottleneck, modern CPUs employ a technique called &ldquo;instruction pipelining&rdquo;. The core idea is to break down the execution of a single instruction into several smaller, often independent stages. Common stages include: Fetch (get instruction from memory/cache), Decode (figure out what the instruction does), Execute (perform the operation, e.g., in the ALU), Memory (access main memory if needed), and Write Back (store the result in a register). This is analogous to an assembly line: instead of one person doing all five steps to assemble a product, five people each do one step, passing the product along. The benefit is throughput: while one instruction is in the Execute stage, the next can be in the Decode stage, and the one after that can be Fetched. Simple instructions like <code>addl $5, %eax</code> no longer necessarily have to wait for a previous instruction&rsquo;s slow memory access to complete. Of course, if the <em>previous</em> instruction modified <code>%eax</code>, our <code>addl</code> instruction <em>would</em> have to wait (a pipeline stall or hazard) until the correct value is ready. Stalls can also occur due to conditional branches (if statements), where the CPU might have to wait to find out which path of execution to take. Clever modern compilers often employ &ldquo;branch prediction&rdquo;: they make an educated guess (based on past behavior or static analysis) about which branch will be taken and fill up the pipeline speculatively with instructions down that path. If the prediction was correct, time is saved; if wrong, the pipeline is flushed (small time penalty), and the correct path is taken.</p>
+<h3 id="fabricating-a-cpu-from-scratch">Fabricating a CPU (from scratch)</h3>
+<p>If you understand basic transistor logic for arithmetic, you could theoretically design a simple ALU and processor circuit. In fact, I once built a rather janky 8-bit CPU myself using redstone in Minecraft, complete with basic compute and data movement instructions. Power efficiency, speed, and circuit density were obviously non-concerns! Even back in 2019, this wasn&rsquo;t groundbreaking, with <a href="https://www.youtube.com/watch?v=iNKAtsC5H4o">several</a> impressive <a href="https://www.youtube.com/watch?v=6tDVENBFhAE">designs</a> demonstrating 32-bit Minecraft CPUs.</p>
+<p>Transitioning from a conceptual circuit (or a redstone contraption) to a real, manufacturable, high-performance CPU requires profound expertise in material science, electrical engineering, and perhaps even chemistry. Here&rsquo;s a vastly simplified glimpse of that journey: First, the intricate circuit design is translated into a physical layout using specialized tools like <a href="http://opencircuitdesign.com/magic/">MagicVLSI</a>. Even achieving <em>just this</em> layout could potentially make you rich if you licensed it to a manufacturer like TSMC (assuming your design is sound). From here, we dive deep into material science. The process starts with silicon dioxide (essentially purified sand) which is refined to extreme purity levels. This silicon is formed into large cylindrical ingots, which are then sliced into thin (around 0.75mm) circular wafers, typically 300mm (about 12 inches) in diameter. This size is apparently a sweet spot, minimizing edge waste while managing contamination risk.</p>
+<p>Next comes the magic (and extreme precision). The silicon wafers are &ldquo;doped&rdquo; by introducing specific impurities (like phosphorus or boron) into the crystal lattice to create the N-type and P-type semiconductor regions that form transistors. The wafer is then coated with a light-sensitive material called &ldquo;photoresist&rdquo;. The circuit layout designed earlier is converted into a series of &ldquo;masks&rdquo; (often made of quartz), essentially stencils for different layers of the chip. One mask is precisely aligned over the wafer, and ultraviolet light is shone through it. This process is called &ldquo;photolithography&rdquo;. Where the light hits the photoresist, its chemical properties change. A solvent then washes away the exposed (or unexposed, depending on the process) photoresist, leaving behind a pattern. Ion implantation or diffusion processes create the doped regions in the exposed silicon. Insulating layers (like silicon dioxide) are deposited, and tiny trenches are etched and filled with conductive material (like copper) to create the wiring connecting the transistors. This surface is then polished perfectly flat, completing a single layer of the CPU.</p>
+<p>A modern CPU consists of dozens of such layers meticulously stacked atop one another. This multi-layer fabrication process is incredibly delicate and time-consuming; it&rsquo;s a marvel of modern engineering that it works <em>at all</em>. At every single step, maintaining an environment virtually free of dust particles or any other contaminants is paramount. A single microscopic flaw can render an entire CPU (or potentially all ~230 CPUs on the wafer) useless &ndash; the stakes make the <a href="https://breakingbad.fandom.com/wiki/Fly">infamous &ldquo;Fly&rdquo; episode in Breaking Bad</a> seem trivial. Ultra-pure water is used extensively for cleaning between stages. After this complex ballet of deposition, etching, and doping is complete, the individual CPU squares (&ldquo;dies&rdquo;) are cut from the wafer and rigorously tested. Based on their performance characteristics (clock speed achieved, functional cores), they are &ldquo;binned&rdquo; and sold as different product tiers (e.g., Core i3 vs. Core i9). Defective dies are discarded. Finally, the functional dies are packaged &ndash; mounted onto a substrate with pins or pads for connecting to the motherboard, and capped with a protective heat spreader.</p>
+<p>And here&hellip; here is where my understanding hits a wall. When the CPU executes an instruction like <code>addl $5, %eax</code>, a cascade of events unfolds at a scale bordering on the atomic, far smaller than my intuition can grasp. A &ldquo;4nm&rdquo; process technology refers to the characteristic size of features like transistor gates being around 4 nanometers. A single silicon atom is roughly 0.2 nanometers across. We are operating incredibly close to fundamental physical limits. I don&rsquo;t know the specific challenges faced at 4nm, nor how much smaller we can realistically go. We&rsquo;ve reached the silicon atom bedrock. To dig deeper requires expertise far outside computer science, and perhaps, necessitates inventing the universe to ensure silicon atoms behave exactly as needed &ndash; not very conductive / insulating &ndash; just the perfect amount of &ldquo;semi&rdquo; conductance!</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>So there you have it. A journey sparked by pressing &ldquo;Enter&rdquo; during a mundane Google search led us down through layers of software, networking protocols, operating system machinery, and finally into the actual black magic fuckery of CPU fabrication and operation. It&rsquo;s genuinely astounding that we can build machines capable of such intricate mechanisms like pipelining and caching. The sheer number of coordinated processes firing off in near-instantaneous succession just to deliver search results is staggering. It represents a colossal accumulation of human ingenuity, contributed by countless individuals across diverse fields, many of whom never knew each other, culminating in technologies we now often take utterly for granted.</p>
+<p>To put this into context, this entire deep dive was prompted by a relatively simple, everyday task: browsing the text-based web. We haven&rsquo;t even touched upon the complexities involved in applications like modern computer games or streaming high-definition video, which involve an intense interplay between networking, CPUs, and specialized throughput-oriented processors like GPUs (whose own fascinating architecture we completely skipped). We also glossed over the gnarly, crucial details of process isolation, memory protection, and user management within the operating system &ndash; areas where subtle flaws can lead to significant security vulnerabilities, many perhaps still undiscovered &ndash; or more dangerously, discovered but undisclosed.</p>
+<p>Now, a reasonable question arises: &ldquo;In the age of AI assistants like Claude, Gemini, or [Future-AI-Model] that can generate working code from a simple prompt, is delving into this level of detail still valuable?&rdquo; I don&rsquo;t have a definitive answer for everyone. Personally, I was drawn to CS <em>precisely because</em> I wanted to understand this intricate technological tapestry. I believe that having this deeper awareness &ndash; understanding the layers beneath the abstractions &ndash; makes one a better programmer, better equipped to diagnose problems, optimize performance, and reason about system behavior. Perhaps I&rsquo;m clinging to an old-fashioned notion, and the next generation of AI will internalize all this knowledge and more. Yet, the desire to comprehend this unfathomably delicate choreography of atoms, still persists. It remains profoundly useful to internalize that CPU operations are often constrained by memory access speed, and that moving data &ndash; whether across a network or from RAM to a CPU register &ndash; is <em>still</em> one of the most fundamental and challenging bottlenecks in computing. I struggle to think of <em>any</em> other field where such routine, everyday actions performed by millions of consumers, rely on the flawless, split-second execution of so many disparate, complex systems. That, to me, is why computer science retains its magic, and I hope it always will.</p>
+<h2 id="references--interesting-tangents">References + interesting tangents</h2>
+<ul>
+<li><a href="https://www.os-book.com/OS10/">Operating System Concepts, 10th Edition</a> by Silberschatz, Gavin and Gagne</li>
+<li><a href="https://www.cs.utexas.edu/~rossbach/cs380p/papers/ulk3.pdf">Understanding the Linux Kernel</a> by Bovet and Gesati</li>
+<li><a href="https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Computer%20Networks.pdf">Computer Networks</a> by Tanenbaum</li>
+<li><a href="https://nlp.stanford.edu/IR-book/html/htmledition/irbook.html">Introduction to Information Retrieval</a> by Manning, Raghavan and Schutze</li>
+<li><a href="https://nlp.stanford.edu/IR-book/html/htmledition/a-first-take-at-building-an-inverted-index-1.html">A first take at building an inverted index</a></li>
+<li><a href="https://patents.google.com/patent/US10073874B1/en">&ldquo;Updating Inverted Index&rdquo;</a> US Patent</li>
+<li><a href="https://patents.google.com/patent/US9652483/en">&ldquo;Index server architecture using tiered and sharded phrase posting lists&rdquo;</a> US Patent</li>
+<li><a href="https://patents.google.com/patent/US9165040B1/en">&ldquo;Producing a ranking for pages using distances in a web-link graph &ldquo;</a> US Patent</li>
+<li><a href="https://pubs.opengroup.org/onlinepubs/9799919799.2024edition/">The POSIX.1-2024 standard</a></li>
+<li><a href="https://www.cloudflare.com/learning/performance/what-is-load-balancing/">What is load balancing</a></li>
+<li><a href="http://nginx.org/en/docs/http/load_balancing.html">Using nginx as HTTP load balancer</a></li>
+<li><a href="https://www.devever.net/~hl/backstage-cast">Modern processors have a backstage cast</a> by Hugo Landou</li>
+<li><a href="https://blog.benjojo.co.uk/post/dns-filesystem-true-cloud-storage-dnsfs">DNSFS: Store your files in others DNS resolver caches</a> by Ben Cox</li>
+<li><a href="https://limpet.net/mbrubeck/2014/08/08/toy-layout-engine-1.html">Let&rsquo;s build a browser engine</a> by Matt Brubeck</li>
+<li><a href="https://github.com/SerenityOS/serenity">SerenityOS</a></li>
+<li><a href="https://www.youtube.com/watch?v=djCqHH0SCmA">Dustin Brett : I Spent 4 YEARS Building an OS in the Browser</a></li>
+<li><a href="https://strace.io/">strace</a></li>
+<li><a href="https://stackoverflow.com/questions/4138338/how-printf-works-internally">How <code>printf</code> works internally</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Protection_ring">Protection rings</a></li>
+<li><a href="https://stackoverflow.com/questions/6710040/cpu-privilege-rings-why-rings-1-and-2-arent-used">Why are CPU privilege rings 1 and 2 not used?</a></li>
+<li><a href="https://www.youtube.com/watch?v=QMiubC6LdTA&amp;t=1092s">Console Hacking 2016 (33c3) &ndash; fail0verflow on running PS4 on Linux</a></li>
+<li><a href="https://www.youtube.com/watch?v=dX9CGRZwD-w">Branch Education : How are Microchips Made? 🖥️🛠️ CPU Manufacturing Process Steps</a></li>
+<li><a href="https://www.youtube.com/watch?v=2ehSCWoaOqQ">LTT : I Can Die Now. - Intel Fab Tour!</a></li>
+<li>ICs in Garage: <a href="http://sam.zeloof.xyz/first-ic/">First IC</a> and <a href="http://sam.zeloof.xyz/second-ic/">Second IC</a> by Sam Zeloof</li>
+</ul>
+
+      </article>
+      
+
+      <div class="row">
+    <div class="col-md">
+        
+        <a href="https://ashutoshbsathe.github.io/blog/parsing-the-parser/">
+            <span>previous: </span>
+            <span>Parsing the parser</span>
+        </a>
+        
+    </div>
+    <div class="col-md text-md-end">
+        
+    </div>
+</div>
+    </div>
+  </div>
+  <footer>
+    <div class="container mt-4 pb-1">
+    <p class="small opacity-75">
+        ashutoshbsathe @ 2025
+        
+        // powered by <a href="https://gohugo.io/">hugo</a> and <a href="https://github.com/imgios/not-much">imgios/not-much</a>
+        
+    </p>
+</div>
+
+  </footer>
+
+  </main>
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.css" integrity="sha384-veTAhWILPOotXm+kbR5uY7dRamYLJf58I7P+hJhjeuc7hsMAkJHTsPahAl0hBST0" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.js" integrity="sha384-v6mkHYHfY/4BWq54f7lQAdtIsoZZIByznQ3ZqN38OL4KCsrxo31SLlPiak7cj/Mg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+        delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false }
+        ]
+        });
+    });
+</script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

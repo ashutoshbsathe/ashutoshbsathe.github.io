@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>ashutoshbsathe @ {year}</copyright>
-    <lastBuildDate>Thu, 01 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ashutoshbsathe.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>If you want to browse the internet, you must first invent the universe</title>
+      <link>https://ashutoshbsathe.github.io/blog/internet-universe/</link>
+      <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://ashutoshbsathe.github.io/blog/internet-universe/</guid>
+      <description>An unnecessarily detailed description of what happens every time you google something</description>
+    </item>
     <item>
       <title>Parsing the parser</title>
       <link>https://ashutoshbsathe.github.io/blog/parsing-the-parser/</link>
