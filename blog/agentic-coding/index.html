@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/png" href="https://ashutoshbsathe.github.io/favicon.ico" />
+<meta property="og:url" content="https://ashutoshbsathe.github.io/blog/agentic-coding/">
+  <meta property="og:site_name" content="Ashutosh Sathe">
+  <meta property="og:title" content="~6 months of &#34;agentic&#34; coding">
+  <meta property="og:description" content="The future is probably agentic. The present still needs adult supervision.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2026-05-30T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-05-30T00:00:00+00:00">
+
+<title>~6 months of &#34;agentic&#34; coding | Ashutosh Sathe</title>
+
+      <link rel="stylesheet" href="/css/main.min.698bc3e32b756e1f5322e47c0a024ef4fef02de7ddbc5af443455430b5482f03.css" integrity="sha256-aYvD4yt1bh9TIuR8CgJO9P7wLefdvFr0Q0VUMLVILwM=" crossorigin="anonymous">
+  
+        <link rel="stylesheet" href="/css/palette/absathe.min.3789087cdc680485b8c6d9c8615545b611f0490be5ac06d2c45d1defefc59cf5.css" integrity="sha256-N4kIfNxoBIW4xtnIYVVFthHwSQvlrAbSxF0d7&#43;/FnPU=" crossorigin="anonymous">
+
+      <script src="/js/main.86bb3d8e6f46df0fc97c2731e6b99175a13b87a4086acf578ff9b6992fcf32c1.js" integrity="sha256-hrs9jm9G3w/JfCcx5rmRdaE7h6QIas9Xj/m2mS/PMsE=" crossorigin="anonymous"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>">
+
+</head>
+
+  
+<body
+>
+  
+  <main>
+    
+  <div class="container pt-5">
+    <div class="row mt-5 pt-5">
+      
+  <nav aria-label="breadcrumb" class="small">
+    <ol class="breadcrumb fw-bold">
+    <li class="breadcrumb-item">
+      <a href="/"
+        
+      >home</a>
+      
+    </li>
+    <li class="breadcrumb-item">
+      <a href="/about"
+        
+      >about</a>
+      
+    </li>
+    <li class="breadcrumb-item">
+      <a href="/papers"
+        
+      >papers</a>
+      
+    </li>
+    <li class="breadcrumb-item">
+      <a href="/blog"
+        class="text-decoration-underline link-offset-3"
+        
+      >blog</a>
+      
+    </li>
+    </ol>
+  </nav>
+
+    </div>
+    
+    <div class="post">
+      <header class="mb-4">
+        <h1>~6 months of &#34;agentic&#34; coding</h1>
+        
+        
+        <div aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item small">
+              <time datetime="2026-05-30T00:00:00&#43;00:00">May 30, 2026</time>
+            </li>
+            <li class="breadcrumb-item small">
+              11 minutes
+            </li>
+          </ol>
+        </div>
+      </header>
+      <article>
+        <p>So I was a complete skeptic of the whole &ldquo;agentic&rdquo; / &ldquo;vibe&rdquo; coding phenomenon before last year&rsquo;s NeurIPS. While I was in California anyway, I decided to visit a bunch of friends in San Francisco. I knew SF was &ldquo;big&rdquo; on vibe coding, but I wasn&rsquo;t aware of just <em>how much</em> seemingly <em>everyone</em> believed in it. Even some of my colleagues told me that the internal agentic coding harnesses had improved significantly and that they didn&rsquo;t expect to be writing much code &ldquo;by hand&rdquo; in 2026.</p>
+<p>I was still skeptical that agentic coding could be useful or relevant for my particular class of work. But I decided to try my friend&rsquo;s Claude Code to forward-port a Minecraft performance optimization mod I had written ages ago and was disproportionately proud of. Not only did Claude oneshot the port, it also informed me that the mod was no longer necessary because the functionality had long since been incorporated into PaperMC.</p>
+<p>Suddenly I felt very behind. Not in the &ldquo;everyone is getting rich except me&rdquo; sense, but in the sense that I might be dismissing a tool that had already become genuinely useful. I decided to give agentic coding a serious shot.</p>
+<p>This blog is a reflection on roughly 6.5 months of using coding agents professionally and for hobby projects.</p>
+<h1 id="background">Background</h1>
+<p>Before getting into the details, a quick &ldquo;who am I and what am I using this for?&rdquo;</p>
+<p>I work as a Research Engineer at Google DeepMind. Outside of work, I primarily write code for fun: game modifications, videogame tinkering, hobbyist ML projects and the occasional cursed side project.</p>
+<p>During these six months, I used agentic coding primarily to iterate on and implement research ideas professionally. Outside of work, I also started playing <em>Elden Ring</em> (my first serious soulslike playthrough). I quickly decided that some parts of the experience could be improved.</p>
+<p>In particular, I wanted a bespoke save mechanism. I got tired of applying exactly the same sequence of buffs outside a boss arena and repeatedly fighting through phase one just to get a few attempts at phase two.</p>
+<p><em>&ldquo;bUt tHis iSn&rsquo;T wHaT mIyaZAki iNteNdeD&rdquo;</em></p>
+<p>Yes, I&rsquo;m aware. I should probably experiment with different builds and embrace the suffering. I don&rsquo;t have time for that. Even with my shortcuts, I still suffered plenty and had to spend an endless amount of time optimizing my build before finally beating Elden Beast a few weeks ago.</p>
+<p>Since I was completely new to Elden Ring modding, I had no idea where to start. So I used coding agents to both brainstorm and implement the save system.</p>
+<p>Most of my professional usage was in Python. Personal projects were a mix of Python, Rust and C++, though the final Elden Ring mod ended up being written in Rust.</p>
+<h1 id="first-month">First month</h1>
+<p>The first month was painful.</p>
+<p>My expectations had been set sky high by Claude Code oneshotting the Minecraft mod. At work, I had access to an internal version of Antigravity (Google&rsquo;s externally known agentic coding tool) that could use early Gemini release candidates.</p>
+<p>I have a suite of internal tools that automate repetitive tasks. Think dumping results into spreadsheets, uploading logs to visualization UIs, generating reports, and so on.</p>
+<p>At the time, I was investigating a relatively new problem and wanted to try several low-hanging interventions. The task was technically fairly simple: it would need the agent to just plumb 5 of my existing tools and read out the results.</p>
+<p>Armed with a LOT of excitement, I pointed Antigravity at my tooling, described what I wanted, and pressed Enter.</p>
+<p>The anticipation went through the roof and immediately into the floor.</p>
+<p>The agent did something unbelievably stupid.</p>
+<p>Okay, fine. Bad prompt. Let me be more explicit.</p>
+<p>Same failure.</p>
+<p>After several more attempts, I explicitly described the exact five steps I would have performed manually. The agent still failed the final step.</p>
+<p>After that experience, I dramatically recalibrated my expectations.</p>
+<p>I reduced agentic coding to a glorified implementation engine:</p>
+<blockquote>
+<p>I&rsquo;ve already written the design doc. Please turn it into code.</p>
+</blockquote>
+<p>However, then the design docs became extremely verbose and detailed. Sometimes the exploratory utilities I was building had so little reuse value that writing the design doc took longer than implementing them myself.</p>
+<p>Still, it was a relatively quiet period. People were on vacation, priorities for the next year were still being finalized, and I had the luxury of being inefficient.</p>
+<p>The generated code was usually functional. It was also often terrible.</p>
+<p>The models loved inventing bespoke serialization structures that should never have existed. They would create file-specific abstractions, unnecessary helper classes, and layers of indirection that solved problems nobody actually had.</p>
+<p>This wasn&rsquo;t unique to Gemini. Claude frequently behaved the same way in my personal projects. The agents also had a particularly funny habit. Asking them to fix a bug in a newly-created file often resulted in one of three outcomes:</p>
+<ol>
+<li>Rewrite the entire file from scratch and break several unrelated things.</li>
+<li>Add increasingly specific fixes until the code contained fifty layers of nested conditionals.</li>
+<li>Delete the file entirely.</li>
+</ol>
+<p>I am <em>not</em> exaggerating. I <em>truly</em> wish I was. How is any of this real? At times I genuinely wondered whether San Francisco had access to a secret Claude checkpoint that existed solely to keep the vibe-coding economy alive.</p>
+<p>How was &ldquo;agentic&rdquo; coding a REAL product category?</p>
+<h1 id="second-month">Second month</h1>
+<p>After an incredibly frustrating first month, and after talking to friends and colleagues, I realized that a large part of the problem was my configuration.</p>
+<p>I had been using the default setup because I somehow believed that system instructions, GEMINI.md / CLAUDE.md / AGENTS.md files, MCP servers and agent skills couldn&rsquo;t possibly have a statistically significant effect on outcomes. (My research centers around problems where such &ldquo;context management&rdquo; fixes are generally frowned upon)</p>
+<p>However, after talking to colleagues and seeing how much effort people were putting into their setups, I decided to take configuration seriously. It turns out there is an enormous ecosystem &ndash; both within Google and outside &ndash; of skills, prompts, MCP servers and workflow conventions that dramatically change agent behavior.</p>
+<p>I even built different agent profiles for different tasks. Some were optimized for implementation, others for exploration, others for debugging. This turned out to be essential because indiscriminately enabling every skill and MCP server just creates context bloat. More tools does not monotonically improve outcomes. I also discovered subagents, which allowed the orchestrator agent to delegate small, well-scoped tasks to other agents.</p>
+<p>With all of these improvements, the agents mostly stopped deleting files to fix bugs.</p>
+<p>Progress. (Bare minimum???)</p>
+<p>Unfortunately, the code was still often unpleasant.</p>
+<p>For example, when asked to scrape an internal Gemini endpoint across a collection of prompts, the model hallucinated endpoint names, hardcoded filenames, and still managed to invent bespoke serialization classes with names like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>AshutoshGeminiScraper(
+</span></span><span style="display:flex;"><span>    prompt: <span style="color:#8be9fd;font-style:italic">str</span>,
+</span></span><span style="display:flex;"><span>    response: <span style="color:#8be9fd;font-style:italic">str</span>,
+</span></span><span style="display:flex;"><span>    time_to_first_token: time_t,
+</span></span><span style="display:flex;"><span>    model: <span style="color:#8be9fd;font-style:italic">str</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>The same pattern appeared in personal projects. Models would invent inheritance hierarchies because two classes happened to reference the same game entity.</p>
+<p>The agents also always wanted to do something that sounded sophisticated:</p>
+<ul>
+<li>&ldquo;Let&rsquo;s switch to a data-oriented architecture.&rdquo;</li>
+<li>&ldquo;Let&rsquo;s avoid reinitializing this struct.&rdquo;</li>
+<li>&ldquo;Let&rsquo;s introduce a generic abstraction layer.&rdquo;</li>
+</ul>
+<p>What surprised me even more was the complete lack of pushback.</p>
+<p>At one point, purely as an experiment, I asked multiple agents to merge ~50 C++ files from my Elden Ring mod into a single giant file because &ldquo;readability improves when there&rsquo;s only one file to read.&rdquo;</p>
+<p>EVERY. SINGLE. CODING. AGENT. AGREED. Codex / Claude / Antigravity ALL OF THEM.</p>
+<p>All of them <em>happily</em> generated a giant monolithic file without questioning the premise for even a second. 2/3 of those files actually built and were even functional!</p>
+<p>Honestly, that&rsquo;s an impressive feat.</p>
+<p>If a human coworker asked me to combine fifty files into a single 15k LOC source file, it would take considerable amount of willpower for me to comply.</p>
+<p>After this experience, I heavily modified my agent instructions.</p>
+<ul>
+<li>Remember that all code is a liability.</li>
+<li>More code does not imply more intelligence or competence.</li>
+<li>Prefer KISS principles.</li>
+<li>You MUST push back on unnecessary complexity.</li>
+<li>ALWAYS discuss both short-term hackability and long-term scalability of your solution.</li>
+<li>NEVER choose between those tradeoffs on my behalf.</li>
+<li>ALWAYS prefer tasteful solutions over clever solutions.</li>
+<li>ALWAYS align before writing large amounts (&gt;200 LOC) of code.</li>
+<li>Break changes into small reviewable chunks. Always assume that a human will review this.</li>
+<li>Preserve plans and design documents alongside implementation.</li>
+</ul>
+<p>These aren&rsquo;t the exact instructions, but they capture the spirit. Also a slight tangent, if you don&rsquo;t know what I mean by &ldquo;tasteful&rdquo; solutions or &ldquo;tasteful&rdquo; code, refer to <a href="https://youtu.be/o8NPllzkFhE?si=oB57lGDidCW-Kkv4&amp;t=858">this TED interview of Linus Torvalds</a>, honestly a great interview if you haven&rsquo;t watched it yet.</p>
+<p>Looking back, most of them are really attempts to compensate for a missing prior: the models understand software architecture, but they do not naturally share my preferences about tradeoffs or my preferred way to resolve those tradeoffs. The biggest improvement came from forcing the agent to surface tradeoffs instead of silently choosing them.</p>
+<p>I no longer received 7000-line changelists containing surprise architectural rewrites. I received smaller, understandable changes that I could actually review and take responsibility for.</p>
+<p>Does this reduce the &ldquo;vibes&rdquo; in vibe coding?</p>
+<p>Probably.</p>
+<p>I prefer it anyway. Many of the &ldquo;agentic coding evangelists&rdquo; would <em>hate</em> that I am taking away agent&rsquo;s autonomy by making sure it generates code that I (a human) understands. That I am <em>slowing</em> down the agent&rsquo;s iteration loop. &ldquo;It generates code only it understands, humans are probably too stupid to understand the genius code that my agent wrote. We would get to singularity much faster if humans stopped acting like middle managers for these agents&rdquo; I see this argument all the time, and yet, I constantly find that &ldquo;acting like a middle manager&rdquo; <em>actually</em> resulted in better code that is readable and maintainable by a human.</p>
+<h1 id="full-send-vibe-coding">Full send vibe coding</h1>
+<p>After the first two months, my configuration is mostly stable and I&rsquo;ve been using roughly the same setup ever since. However, the experience is <em>still</em> full of extremes. The systems are exceptionally good at some things and frustratingly bad at others.</p>
+<p>But they have become &ldquo;predictably useful&rdquo;.</p>
+<p>I can understand the &ldquo;liftoff&rdquo; argument now. I can feel the acceleration. My research iteration loop is significantly faster. I have visual prototypes for ideas that previously would have remained half-implemented notes in a document somewhere. My velocity at work has genuinely increased by roughly 4-5x. For personal projects, the gain is probably closer to 2-3x.</p>
+<p>Importantly, this is not because the agents are solving research problems for me. They&rsquo;re accelerating implementation and experimentation once I already know roughly what I want to try. I now have a fairly good mental model of where current coding agents fail, and I structure my workflows accordingly.</p>
+<p>That said, the same pathologies still show up:</p>
+<ul>
+<li>unnecessary abstractions,</li>
+<li>over-engineering,</li>
+<li>poor alignment,</li>
+<li>reimplementing existing libraries,</li>
+<li>overconfident architectural decisions.</li>
+</ul>
+<p>I don&rsquo;t think the long-term solution is simply better system prompts. The underlying models are clearly capable of producing tasteful code because they do so when prompted appropriately. The problem is that these preferences are not naturally embedded in the model. Maybe &ldquo;just some more RLxF bro&rdquo; ought to fix this? Defining &ldquo;good taste&rdquo; in software engineering probably difficult to in a &ldquo;general&rdquo; way.</p>
+<h1 id="annoying-behaviors">Annoying behaviors</h1>
+<p>These aren&rsquo;t dealbreakers per say, but they remain irritating.</p>
+<p>One recurring issue is that agents constantly need to rediscover a codebase. Every new conversation starts with another tour of the repository. Even stranger is how they navigate. If I want a function definition, I hit <code>gd</code> in my pre-agentic-coding Neovim setup and jump directly to it through the LSP. Agents often seem to grep through files manually, repeatedly searching for symbols they could theoretically navigate to directly. Maybe tokens are cheap enough that it doesn&rsquo;t matter. Maybe I&rsquo;m missing something. Either way, it feels unnatural.</p>
+<p>Another failure mode I rarely see discussed is that these systems can quietly make you less scientific. I once had an intervention that clearly failed to produce the scaling behavior I wanted. I asked the model whether there was another metric that might reveal the trend (scaling ladder curve) more clearly. The model happily <em>invented</em> one.</p>
+<p>It combined several quantities using arbitrary coefficients, sprinkled in a few magical constants, and produced a beautiful curve that supported my hypothesis. The plot looked convincing. The explanation looked convincing at first glance. But the metric was complete nonsense. There was <em>no</em> scientific justification for the formula whatsoever. The scary part is that nothing looked obviously wrong at first glance. The output had equations, plots, reasoning and <em>&ldquo;apparent&rdquo;</em> rigor. It simply wasn&rsquo;t rigorous.</p>
+<h1 id="summary">Summary</h1>
+<p>Six months ago I was completely skeptical of agentic coding. Today I&rsquo;m not.</p>
+<p>The productivity gains are real. I can feel them in my day-to-day work. I prototype faster, explore more ideas, and spend less time writing boilerplate. The custom save mod for Elden Ring would <em>definitely</em> not exist without &ldquo;agentic&rdquo; coding.</p>
+<p>At the same time, I trust the agents far less than many of the &ldquo;agentic coding evangelists&rdquo;. Left unchecked, they&rsquo;ll happily generate unnecessary abstractions, implement dubious designs, and agree with almost any architectural decision you suggest &ndash; including terrible ones.</p>
+<p>My current view is that &ldquo;agentic&rdquo; coding works best when the human already has a reasonably clear destination. If you know what you&rsquo;re trying to build, these systems can dramatically accelerate the journey. If you don&rsquo;t, they can generate an impressive amount of motion with surprisingly little progress.</p>
+<p>The future probably is &ldquo;agentic&rdquo;. The present still needs adult supervision.</p>
+
+      </article>
+      
+
+      <div class="row">
+    <div class="col-md">
+        
+        <a href="https://ashutoshbsathe.github.io/blog/internet-universe/">
+            <span>previous: </span>
+            <span>If you want to browse the internet, you must first invent the universe</span>
+        </a>
+        
+    </div>
+    <div class="col-md text-md-end">
+        
+    </div>
+</div>
+    </div>
+  </div>
+  <footer>
+    <div class="container mt-4 pb-1">
+    <p class="small opacity-75">
+        ashutoshbsathe @ 2026
+        
+        // powered by <a href="https://gohugo.io/">hugo</a> and <a href="https://github.com/imgios/not-much">imgios/not-much</a>
+        
+    </p>
+</div>
+
+  </footer>
+
+  </main>
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.css" integrity="sha384-veTAhWILPOotXm+kbR5uY7dRamYLJf58I7P+hJhjeuc7hsMAkJHTsPahAl0hBST0" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.js" integrity="sha384-v6mkHYHfY/4BWq54f7lQAdtIsoZZIByznQ3ZqN38OL4KCsrxo31SLlPiak7cj/Mg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+        delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false }
+        ]
+        });
+    });
+</script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

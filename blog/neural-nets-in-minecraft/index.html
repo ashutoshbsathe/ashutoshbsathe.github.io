@@ -193,7 +193,7 @@
 <img src="/blog_assets/neural-nets-in-minecraft/redstone-reducer-minecraft.png" alt="redstone reducer minecraft" width="100%">
 </center>
 <p>This reducer architecture unfortunately <strong>cannot work for more than 16 bits</strong>. That being said I&rsquo;m not a big redstone guy and I can&rsquo;t even make a 4x4 flush piston door without looking up a tutorial. Maybe someone with deeper understanding of redstone mechanics can do a much better job at this.</p>
-<h2 id="scarpet---a-programming-language-_in_-minecraft">Scarpet - A programming language <em>in</em> Minecraft</h2>
+<h2 id="scarpet---a-programming-language-in-minecraft">Scarpet - A programming language <em>in</em> Minecraft</h2>
 <p>While the reducer I designed will work for small neural networks (only 3x3 conv filters, not more than 16 in any dimension etc.), I wanted to support more general and bigger neural networks. Scarpet is an in-game, functional-like programming language developed by <a href="https://github.com/gnembon">gnembon</a>. While scarpet requires <a href="https://github.com/gnembon/fabric-carpet">carpetmod</a> (which means our neural networks won&rsquo;t be pure vanilla Minecraft-y), it is an excellent choice for building neural nets because it is server friendly and has a nifty <a href="https://github.com/gnembon/fabric-carpet/blob/master/docs/scarpet/Full.md#game_tickmstime"><code>game_tick()</code></a> function. <a href="https://github.com/gnembon/fabric-carpet/blob/master/docs/scarpet/Full.md#game_tickmstime"><code>game_tick()</code></a> allows you to essentially pause the game for specified amount of time. This means our block by block visualization requirement is also fulfilled. <a href="https://github.com/ashutoshbsathe">gnembon</a> does an excellent job at explaining the language with the <a href="https://github.com/gnembon/fabric-carpet/blob/master/docs/scarpet/Full.md">documentation of scarpet</a>.</p>
 <h2 id="representation-of-neural-nets">Representation of Neural Nets</h2>
 <p>With scarpet as our tool, we need to focus on representating binarized neural networks in Minecraft. We can set 2 different blocks for representing $+1$ and $-1$ in weights/activations. Moreover, I also thought it would be nice to be able to convert my PyTorch binarized neural network into my Minecraft representation. Therefore, I decided to generate a <a href="https://github.com/maruohon/litematica">litematica</a> schematic for every layer of my neural network. Litematica allows you to put a schematic of block arrangements anywhere in the world, this schematic is extremely handy to recreate the block arrangement in the world.</p>
@@ -236,7 +236,7 @@ frameborder="0" allowfullscreen class="yt-iframe-video"></iframe>
   <footer>
     <div class="container mt-4 pb-1">
     <p class="small opacity-75">
-        ashutoshbsathe @ 2025
+        ashutoshbsathe @ 2026
         
         // powered by <a href="https://gohugo.io/">hugo</a> and <a href="https://github.com/imgios/not-much">imgios/not-much</a>
         
